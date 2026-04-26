@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #D3D3D3;
+            text-align: center;
+        }
+
+        .navbar {
+            background: #4f4fb3;
+            padding: 10px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .foto {
+            width: 140px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                margin: auto;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Generales.html">Generales</a></li>
+        <li><a href="Academico.html">Academico</a></li>
+        <li><a href="Laborales.html">Laborales</a></li>
+        <li><a href="Hobbies.html">Hobbies</a></li> 
+        <li><a href="Referencias.html">Referencias</a></li> 
+        <li><a href="Registro.html">Registro</a></li> 
+        </ul>
+    </nav>
+
+    <h2 style="color: rgb(79, 79, 179);">Referencias</h2>
+<h2>Referencias Personales</h2>
+<h2>Jessica Waleska Pérez Melchor</h2>
+<h2>Relacion : Tia</h2>
+<h2>Tel : 4818-0124</h2>
+<hr aria-setsize="20" color="blue" noshade="23">
+<h2>Luis Ernesto Pérez García</h2>
+<h2>Relacion : Hermano</h2>
+<h2>Tel : 4738-8698</h2>
+<video width="300" height="250" controls>
+<source src="videos/video (1).mp4" type="video/mp4"></video>
+<center><audio controls><source src="sonidos/iris.mp4" type="video/mp4">
+</audio></center>
+<hr aria-setsize="20" color="blue" noshade="23">
+
+<script>
+        document.getElementById("menu-toggle").onclick = function () {
+            document.getElementById("nav-links").classList.toggle("active");
+        };
+    </script>
+
+</body>
+</html>
